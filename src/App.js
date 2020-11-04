@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -13,6 +12,9 @@ function App() {
           setCount(count+1)
         },1000);
         setId(id);
+      }
+      else {
+        clearInterval(counterId);
       }
     },[isClicked, count])
 
